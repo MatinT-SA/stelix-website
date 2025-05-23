@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
           <Navigation />
         </header>
         <main>{children}</main>
+        <footer>Copyright by Stelix</footer>
       </body>
     </html>
   );
