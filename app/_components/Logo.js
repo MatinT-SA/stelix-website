@@ -12,9 +12,7 @@ function Logo() {
         quality={100}
         alt="Stelix logo"
       />
-      <span className="text-xl font-semibold text-primary-100">
-        The Wild Oasis
-      </span>
+      <span className="text-xl font-semibold text-primary-100">Stelix</span>
     </Link>
   );
 }
