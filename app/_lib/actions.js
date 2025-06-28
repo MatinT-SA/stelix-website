@@ -1,6 +1,8 @@
 "use server";
 
+import { AuthSessionMissingError } from "@supabase/supabase-js";
 import { auth, signIn, signOut } from "./auth";
+import { supabase } from "./supabase";
 
 export async function updateGuest(formData) {
   const session = await auth();
@@ -13,7 +15,13 @@ export async function updateGuest(formData) {
     throw new Error("Please provide a valid national ID");
 
   const updateData = { nationalID, nationality, countryFlag };
-  console.log(updateData);
+
+  const { data, error } = await supabase
+    .from("guests")
+    .update(updateData)
+    .eq("id", session.user.guestId);
+
+  if (error) throw new Error("Guest could not be updated");
 }
 
 export async function signInAction() {
