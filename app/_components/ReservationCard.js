@@ -20,8 +20,11 @@ function ReservationCard({ booking, onDelete }) {
     numGuests,
     status,
     created_at,
-    cabins: { name, image },
+    cabins = {},
   } = booking;
+
+  const name = cabins?.name ?? "Unknown cabin";
+  const image = cabins?.image ?? "/fallback.jpg";
 
   return (
     <div className="flex border border-primary-800">
