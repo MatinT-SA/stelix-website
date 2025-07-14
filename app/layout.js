@@ -7,6 +7,7 @@ import { ReservationProvider } from "./_components/ReservationContext";
 const josefin = Josefin_Sans({
   subsets: ["latin"],
   display: "swap",
+  variable: "--font-josefin",
 });
 
 export const metadata = {
@@ -20,10 +21,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  console.log(josefin.className);
+
   return (
-    <html lang="en">
+    <html lang="en" className={`${josefin.variable} font-josefin`}>
       <body
-        className={`bg-primary-950 text-primary-100 min-h-screen antialiased flex flex-col relative ${josefin.className}`}
+        className={`bg-primary-950 text-primary-100 min-h-screen antialiased flex flex-col relative`}
       >
         <Header />
         <div className="flex-1 px-8 py-12 grid">

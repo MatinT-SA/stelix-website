@@ -35,6 +35,9 @@ module.exports = {
           950: "#382814",
         },
       },
+      fontFamily: {
+        josefin: ["var(--font-josefin)"],
+      },
     },
   },
   plugins: [],
