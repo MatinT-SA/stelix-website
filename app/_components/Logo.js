@@ -11,8 +11,11 @@ function Logo() {
         width="60"
         quality={100}
         alt="Stelix logo"
+        className="hover:scale-110 transition duration-300"
       />
-      <span className="text-xl font-semibold text-primary-100">Stelix</span>
+      <span className="text-xl font-semibold text-primary-100 hover:scale-125 hover:text-primary-200 transition duration-200">
+        Stelix
+      </span>
     </Link>
   );
 }
