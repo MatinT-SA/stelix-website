@@ -20,7 +20,7 @@ export default function Home() {
         </h1>
         <Link
           href="/cabins"
-          className="bg-rosewood px-8 py-6 rounded-xl text-primary-50 text-lg font-semibold hover:bg-[#a84ccf] transition-all"
+          className="bg-rosewood px-8 py-6 rounded-xl text-primary-50 text-lg font-semibold hover:bg-[#a84ccf] transition-all "
         >
           Discover our cabins
         </Link>

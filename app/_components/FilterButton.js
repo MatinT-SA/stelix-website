@@ -7,8 +7,8 @@ export default function FilterButton({
   return (
     <button
       onClick={() => handleFilter(filter)}
-      className={`px-5 py-2 hover:bg-primary-700 ${
-        filter === activeFilter ? "bg-primary-700 text-primary-50" : ""
+      className={`px-5 py-2 hover:bg-rosewood ${
+        filter === activeFilter ? "bg-rosewood text-primary-50" : ""
       }`}
     >
       {children}
