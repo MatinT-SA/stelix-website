@@ -20,22 +20,23 @@ export default async function Page() {
 
         <div className="space-y-8">
           <p>
-            Where nature&apos;s beauty and comfortable living blend seamlessly.
-            Hidden away in the heart of the Italian Dolomites, this is your
-            paradise away from home. But it&apos;s not just about the luxury
-            cabins. It&apos;s about the experience of reconnecting with nature
-            and enjoying simple pleasures with family.
+            Tucked away in a quiet corner of the mountains, this is where nature
+            feels close and time moves a little slower. It&apos;s not about
+            checking in to a place — it&apos;s about checking out from the rush
+            and finding room to breathe again.
           </p>
           <p>
-            Our {cabins.length} luxury cabins provide a cozy base, but the real
-            freedom and peace you&apos;ll find in the surrounding mountains.
-            Wander through lush forests, breathe in the fresh air, and watch the
-            stars twinkle above from the warmth of a campfire or your hot tub.
+            Our {cabins.length} cozy cabins offer just enough comfort to help
+            you settle in — and just enough space to let your mind wander. Step
+            outside, and you&apos;re surrounded by tall trees, open skies, and
+            trails that lead to moments you didn&apos;t plan.
           </p>
           <p>
-            This is where memorable moments are made, surrounded by
-            nature&apos;s splendor. It&apos;s a place to slow down, relax, and
-            feel the joy of being together in a beautiful setting.
+            Spend the evening around a fire. Watch the stars from the warmth of
+            a hot tub. Let the day unfold with no agenda, just the sound of
+            birds, wind, and laughter from people you care about. It&apos;s not
+            a resort. It&apos;s not a getaway. It&apos;s a place to be present,
+            to reconnect, and to remember what that actually feels like.
           </p>
         </div>
       </div>
