@@ -35,6 +35,7 @@ module.exports = {
           950: "#382814",
         },
         rosewood: "#9F585F",
+        magenta: "#a84ccf",
       },
       fontFamily: {
         josefin: ["var(--font-josefin)"],
