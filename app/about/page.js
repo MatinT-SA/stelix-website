@@ -44,6 +44,7 @@ export default async function Page() {
       <div className="col-span-2">
         <Image
           src={Image1}
+          className="rounded-md"
           alt="Family sitting around a fire pit in front of cabin"
           placeholder="blur"
           quality={80}
@@ -54,8 +55,9 @@ export default async function Page() {
         <Image
           src="/about-2.jpg"
           fill
-          className="object-cover"
+          className="object-cover rounded-md"
           alt="Family that manages Stelix"
+          quality={80}
         />
       </div>
 
