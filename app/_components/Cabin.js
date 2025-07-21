@@ -38,7 +38,8 @@ export default function Cabin({ cabin }) {
           <li className="flex gap-3 items-center">
             <MapPinIcon className="h-5 w-5 text-primary-600" />
             <span className="text-lg">
-              Located in the <span className="font-bold">{cabin.location}</span>
+              Located in the{" "}
+              <span className="font-bold">{cabin.location || "N/A"}</span>
             </span>
           </li>
           <li className="flex gap-3 items-center">
