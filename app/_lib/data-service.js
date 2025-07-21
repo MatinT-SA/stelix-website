@@ -7,7 +7,9 @@ import { notFound } from "next/navigation";
 export async function getCabin(id) {
   const { data, error } = await supabase
     .from("cabins")
-    .select("*")
+    .select(
+      "id, name, maxCapacity, regularPrice, discount, description, image, location"
+    )
     .eq("id", id)
     .single();
 
@@ -16,6 +18,7 @@ export async function getCabin(id) {
     notFound();
   }
 
+  console.log("Fetched cabin:", data);
   return data;
 }
 
