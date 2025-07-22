@@ -6,7 +6,7 @@ export default function SubmitButton({ children, pendingLable }) {
 
   return (
     <button
-      className="bg-accent-500 px-8 py-4 text-primary-800 font-semibold hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
+      className="bg-rosewood rounded-md px-8 py-4 text-primary-100 font-semibold hover:bg-magenta transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300"
       disabled={pending}
     >
       {pending ? pendingLable : children}

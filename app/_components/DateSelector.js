@@ -55,7 +55,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-accent-500 text-primary-800 h-[72px]">
+      <div className="flex items-center justify-between px-8 bg-rosewood text-primary-100 h-[72px]">
         <div className="flex items-baseline gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
@@ -85,7 +85,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
 
         {range?.from || range?.to ? (
           <button
-            className="border border-primary-800 py-2 px-4 text-sm font-semibold"
+            className="border border-primary-100 rounded-md hover:bg-primary-100 hover:text-primary-700 transition duration-200 py-2 px-4 text-sm font-semibold"
             onClick={() => resetRange()}
           >
             Clear
