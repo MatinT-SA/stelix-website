@@ -21,8 +21,6 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  console.log(josefin.className);
-
   return (
     <html lang="en" className={`${josefin.variable} font-josefin`}>
       <body

@@ -18,7 +18,6 @@ export async function getCabin(id) {
     notFound();
   }
 
-  console.log("Fetched cabin:", data);
   return data;
 }
 
