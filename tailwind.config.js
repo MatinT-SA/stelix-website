@@ -40,6 +40,9 @@ module.exports = {
       fontFamily: {
         josefin: ["var(--font-josefin)"],
       },
+      screens: {
+        "3xl": "1800px",
+      },
     },
   },
   plugins: [],

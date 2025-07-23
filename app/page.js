@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-24 2xl:mt-48">
+    <main className="mt-24 3xl:mt-48">
       <Image
         src={bg}
         quality={80}
@@ -15,7 +15,7 @@ export default function Home() {
       />
 
       <div className="relative z-10 text-center">
-        <h1 className="text-8xl text-primary-50 mb-10 tracking-tight font-normal">
+        <h1 className="text-3xl text-primary-50 mb-10 tracking-tight font-normal 2xl:text-8xl xl:text-7xl lg:text-6xl md:text-5xl sm:text-4xl">
           Experience the ultimate escape
         </h1>
         <Link
