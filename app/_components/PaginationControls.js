@@ -27,7 +27,7 @@ export default function PaginationControls({
 
   return (
     <div className="mt-10 flex flex-col items-center gap-2">
-      <p className="text-sm text-gray-600">
+      <p className="text-sm text-primary-300">
         Page <span className="font-semibold">{currentPage}</span> of{" "}
         <span className="font-semibold">{totalPages}</span>
       </p>
@@ -36,7 +36,7 @@ export default function PaginationControls({
         <button
           onClick={() => changePage(currentPage - 1)}
           disabled={currentPage === 1}
-          className="px-3 py-1 rounded border bg-white text-primary-700 border-primary-300 hover:bg-primary-100 disabled:opacity-50"
+          className="px-3 py-1 rounded border bg-primary-100 text-primary-700 border-primary-300 hover:bg-primary-50 disabled:opacity-50"
         >
           ◀ Prev
         </button>
@@ -48,7 +48,7 @@ export default function PaginationControls({
             className={`px-3 py-1 rounded border ${
               i + 1 === currentPage
                 ? "bg-accent-500 text-white border-accent-500"
-                : "bg-white text-primary-700 border-primary-300 hover:bg-primary-100"
+                : "bg-primary-100 text-primary-700 border-primary-300 hover:bg-primary-50"
             }`}
           >
             {i + 1}
@@ -58,7 +58,7 @@ export default function PaginationControls({
         <button
           onClick={() => changePage(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="px-3 py-1 rounded border bg-white text-primary-700 border-primary-300 hover:bg-primary-100 disabled:opacity-50"
+          className="px-3 py-1 rounded border bg-primary-100 text-primary-700 border-primary-300 hover:bg-primary-50 disabled:opacity-50"
         >
           Next ▶
         </button>
