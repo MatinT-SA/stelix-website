@@ -47,7 +47,7 @@ export default function PaginationControls({
             onClick={() => changePage(i + 1)}
             className={`px-3 py-1 rounded border ${
               i + 1 === currentPage
-                ? "bg-accent-500 text-white border-accent-500"
+                ? "bg-rosewood text-white border-rosewood"
                 : "bg-primary-100 text-primary-700 border-primary-300 hover:bg-primary-50"
             }`}
           >
