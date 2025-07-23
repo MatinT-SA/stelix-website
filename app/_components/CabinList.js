@@ -1,27 +1,40 @@
 import { getCabins } from "../_lib/data-service";
 import CabinCard from "./CabinCard";
+import { PAGE_SIZE } from "@/app/_lib/config";
+import PaginationControls from "./PaginationControls";
 
-export default async function CabinList({ filter }) {
-  const cabins = await getCabins();
+export default async function CabinList({ filter = "all", page = 1 }) {
+  const { data: cabins, count } = await getCabins(page, PAGE_SIZE);
 
-  if (!cabins.length) return null;
+  if (!cabins?.length) return <p className="text-gray-500">No cabins found.</p>;
 
-  let displayedCabins;
-  if (filter === "all") displayedCabins = cabins;
-
-  if (filter === "small")
+  // Filter cabins based on capacity
+  let displayedCabins = cabins;
+  if (filter === "small") {
     displayedCabins = cabins.filter((cabin) => cabin.maxCapacity <= 3);
-  if (filter === "medium")
+  } else if (filter === "medium") {
     displayedCabins = cabins.filter(
       (cabin) => cabin.maxCapacity >= 4 && cabin.maxCapacity <= 7
     );
-  if (filter === "large")
+  } else if (filter === "large") {
     displayedCabins = cabins.filter((cabin) => cabin.maxCapacity >= 8);
+  }
+
+  const totalPages = Math.ceil(count / PAGE_SIZE);
+
   return (
-    <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14">
-      {displayedCabins.map((cabin) => (
-        <CabinCard cabin={cabin} key={cabin.id} />
-      ))}
-    </div>
+    <>
+      <div className="grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14">
+        {displayedCabins.map((cabin) => (
+          <CabinCard key={cabin.id} cabin={cabin} />
+        ))}
+      </div>
+
+      <PaginationControls
+        totalPages={totalPages}
+        currentPage={page}
+        filter={filter}
+      />
+    </>
   );
 }
