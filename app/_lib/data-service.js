@@ -35,17 +35,26 @@ export async function getCabinPrice(id) {
   return data;
 }
 
-export const getCabins = async function (page = 1, pageSize = 8) {
+export const getCabins = async function (
+  page = 1,
+  pageSize = 8,
+  filter = "all"
+) {
   const from = (page - 1) * pageSize;
   const to = from + pageSize - 1;
 
-  const { data, error, count } = await supabase
+  let query = supabase
     .from("cabins")
     .select("id, name, maxCapacity, regularPrice, discount, image, location", {
       count: "exact",
-    })
-    .order("name")
-    .range(from, to);
+    });
+
+  if (filter === "small") query = query.lte("maxCapacity", 3);
+  if (filter === "medium")
+    query = query.gte("maxCapacity", 4).lte("maxCapacity", 7);
+  if (filter === "large") query = query.gte("maxCapacity", 8);
+
+  const { data, error, count } = await query.order("name").range(from, to);
 
   if (error) {
     console.error(error);
