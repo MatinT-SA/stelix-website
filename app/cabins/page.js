@@ -31,7 +31,7 @@ export default function Page({ searchParams }) {
         <Filter />
       </div>
 
-      <Suspense fallback={<Spinner />} key={filter}>
+      <Suspense fallback={<Spinner />} key={`${filter}-${currentPage}`}>
         <CabinList filter={filter} page={currentPage} />
         <ReservationReminder />
       </Suspense>
