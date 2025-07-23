@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="mt-24">
+    <main className="mt-24 2xl:mt-48">
       <Image
         src={bg}
         quality={80}

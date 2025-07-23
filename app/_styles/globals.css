@@ -93,3 +93,13 @@
 .rdp-month_caption {
   margin-left: 1rem;
 }
+
+/* ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣ */
+/* ↯↯↯↯↯↯↯↯↯↯↯ Responsiveness ↯↯↯↯↯↯↯↯↯↯ */
+/* ▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣▣ */
+
+@media (min-width: 1800px) {
+  html {
+    font-size: 100%;
+  }
+}
