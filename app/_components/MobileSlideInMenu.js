@@ -1,32 +1,39 @@
 "use client";
 
-import { useState } from "react";
+import { X } from "lucide-react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
-import MobileSlideInMenu from "./MobileSlideInMenu";
 
-export default function Navigation({ session }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function MobileSlideInMenu({ isOpen, onClose, session }) {
   return (
-    <nav className="z-10 text-xl w-full bg-transparent px-4 py-3">
-      {/* Top Bar */}
-      <div className="flex justify-end items-center max-w-7xl mx-auto">
-        {/* Hamburger Icon for Mobile */}
+    <div
+      className={`fixed inset-0 z-40 transition-all duration-300 md:hidden ${
+        isOpen ? "visible opacity-100" : "invisible opacity-0"
+      }`}
+    >
+      {/* Backdrop */}
+      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+
+      {/* Slide-in Panel */}
+      <div
+        className={`absolute top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 p-6 space-y-6 ${
+          isOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        {/* Close Icon */}
         <button
-          className="md:hidden"
-          onClick={() => setIsOpen(!isOpen)}
-          aria-label="Toggle navigation menu"
+          onClick={onClose}
+          className="mb-4 text-gray-600 hover:text-rosewood ml-auto block"
+          aria-label="Close menu"
         >
-          <Menu size={28} />
+          <X size={28} />
         </button>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex items-center gap-16">
+        <ul className="flex flex-col space-y-4">
           <li>
             <Link
               href="/cabins"
               className="hover:text-rosewood transition-colors"
+              onClick={onClose}
             >
               Cabins
             </Link>
@@ -35,6 +42,7 @@ export default function Navigation({ session }) {
             <Link
               href="/about"
               className="hover:text-rosewood transition-colors"
+              onClick={onClose}
             >
               About
             </Link>
@@ -44,6 +52,7 @@ export default function Navigation({ session }) {
               <Link
                 href="/account"
                 className="hover:text-rosewood transition-colors flex items-center gap-4"
+                onClick={onClose}
               >
                 <img
                   className="h-8 w-8 rounded-full"
@@ -57,6 +66,7 @@ export default function Navigation({ session }) {
               <Link
                 href="/account"
                 className="hover:text-rosewood transition-colors"
+                onClick={onClose}
               >
                 Guest area
               </Link>
@@ -64,13 +74,6 @@ export default function Navigation({ session }) {
           </li>
         </ul>
       </div>
-
-      {/* Mobile Menu Component */}
-      <MobileSlideInMenu
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        session={session}
-      />
-    </nav>
+    </div>
   );
 }
