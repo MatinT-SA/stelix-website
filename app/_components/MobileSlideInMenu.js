@@ -15,64 +15,61 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
 
       {/* Slide-in Panel */}
       <div
-        className={`absolute top-0 right-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 p-6 space-y-6 ${
+        className={`absolute top-0 right-0 h-full w-56 bg-primary-700 shadow-lg transform transition-transform duration-300 flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         {/* Close Icon */}
-        <button
-          onClick={onClose}
-          className="mb-4 text-gray-600 hover:text-rosewood ml-auto block"
-          aria-label="Close menu"
-        >
-          <X size={28} />
-        </button>
+        <div className="flex justify-end p-4">
+          <button
+            onClick={onClose}
+            className="text-primary-100 hover:text-rosewood"
+            aria-label="Close menu"
+          >
+            <X size={28} />
+          </button>
+        </div>
 
-        <ul className="flex flex-col space-y-4">
-          <li>
+        {/* Menu Items Centered */}
+        <div className="flex-1 flex flex-col items-center justify-start mt-10 gap-6 space-y-6 text-primary-100">
+          <Link
+            href="/cabins"
+            className="hover:text-rosewood transition-colors"
+            onClick={onClose}
+          >
+            Cabins
+          </Link>
+          <Link
+            href="/about"
+            className="hover:text-rosewood transition-colors"
+            onClick={onClose}
+          >
+            About
+          </Link>
+          {session?.user?.image ? (
             <Link
-              href="/cabins"
+              href="/account"
+              className="hover:text-rosewood transition-colors flex items-center gap-3"
+              onClick={onClose}
+            >
+              <img
+                className="h-8 w-8 rounded-full"
+                src={session.user.image}
+                alt={session.user.name || "User"}
+                referrerPolicy="no-referrer"
+              />
+              <span>{session.user.name}</span>
+            </Link>
+          ) : (
+            <Link
+              href="/account"
               className="hover:text-rosewood transition-colors"
               onClick={onClose}
             >
-              Cabins
+              Guest area
             </Link>
-          </li>
-          <li>
-            <Link
-              href="/about"
-              className="hover:text-rosewood transition-colors"
-              onClick={onClose}
-            >
-              About
-            </Link>
-          </li>
-          <li>
-            {session?.user?.image ? (
-              <Link
-                href="/account"
-                className="hover:text-rosewood transition-colors flex items-center gap-4"
-                onClick={onClose}
-              >
-                <img
-                  className="h-8 w-8 rounded-full"
-                  src={session.user.image}
-                  alt={session.user.name || "User"}
-                  referrerPolicy="no-referrer"
-                />
-                <span>{session.user.name}</span>
-              </Link>
-            ) : (
-              <Link
-                href="/account"
-                className="hover:text-rosewood transition-colors"
-                onClick={onClose}
-              >
-                Guest area
-              </Link>
-            )}
-          </li>
-        </ul>
+          )}
+        </div>
       </div>
     </div>
   );
