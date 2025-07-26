@@ -121,3 +121,16 @@
     font-size: 70%;
   }
 }
+
+@media (max-width: 375px) {
+  .date-selector-wrapper .rdp-day,
+  .date-selector-wrapper .rdp-button {
+    font-size: 1.2rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .rdp-month_caption {
+    margin-left: 2rem;
+  }
+}
