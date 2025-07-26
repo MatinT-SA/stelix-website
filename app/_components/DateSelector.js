@@ -55,7 +55,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
         }
       />
 
-      <div className="flex items-center justify-between px-8 bg-rosewood text-primary-100 h-[72px]">
+      <div className="flex items-center justify-between lg:px-8 md:px-3 sm:px-1 xs:px-3 bg-rosewood text-primary-100 h-[72px]">
         <div className="flex items-baseline gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
@@ -66,18 +66,24 @@ function DateSelector({ cabin, settings, bookedDates }) {
                 </span>
               </>
             ) : (
-              <span className="text-2xl">${regularPrice}</span>
+              <span className="lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
+                ${regularPrice}
+              </span>
             )}
             <span className="">/night</span>
           </p>
           {numNights ? (
             <>
-              <p className="bg-accent-600 px-3 py-2 text-2xl">
+              <p className="bg-accent-600 px-3 py-2 lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
                 <span>&times;</span> <span>{numNights}</span>
               </p>
               <p>
-                <span className="text-lg font-bold uppercase">Total</span>{" "}
-                <span className="text-2xl font-semibold">${cabinPrice}</span>
+                <span className="lg:text-xl md:text-xl sm:text-md text-xs font-bold uppercase">
+                  Total
+                </span>{" "}
+                <span className="lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg font-semibold">
+                  ${cabinPrice}
+                </span>
               </p>
             </>
           ) : null}
