@@ -75,7 +75,7 @@ function ReservationForm({ cabin, user }) {
             name="observations"
             id="observations"
             className="px-5 py-3 bg-primary-200 text-primary-800 w-full shadow-sm rounded-md"
-            placeholder="Any pets, allergies, special requirements, etc.?"
+            placeholder="Add notes for your stay (optional)"
           />
         </div>
 
