@@ -10,16 +10,13 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
         isOpen ? "visible opacity-100" : "invisible opacity-0"
       }`}
     >
-      {/* Backdrop */}
       <div className="absolute z-40 inset-0 bg-black/50" onClick={onClose} />
 
-      {/* Slide-in Panel */}
       <div
-        className={`absolute top-0 right-0 h-full w-56 bg-primary-700 shadow-lg transform transition-transform duration-300 flex flex-col ${
+        className={`absolute top-0 right-0 h-full z-50 w-56 bg-primary-700 shadow-lg transform transition-transform duration-300 flex flex-col ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        {/* Close Icon */}
         <div className="flex justify-end p-4">
           <button
             onClick={onClose}
@@ -30,7 +27,6 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
           </button>
         </div>
 
-        {/* Menu Items Centered */}
         <div className="flex-1 flex flex-col items-center justify-start mt-10 gap-6 space-y-6 text-primary-100">
           <Link
             href="/cabins"
