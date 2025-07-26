@@ -12,8 +12,8 @@ export default async function Page() {
   const cabins = await getCabins();
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
-      <div className="col-span-3">
+    <div className="grid grid-cols-1 sm:grid-cols-5 gap-x-12 gap-y-24 text-lg items-center">
+      <div className="sm:col-span-3">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           Welcome to Stelix
         </h1>
@@ -41,17 +41,17 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="sm:col-span-2">
         <Image
           src={Image1}
-          className="rounded-md"
+          className="rounded-md w-full h-auto"
           alt="Family sitting around a fire pit in front of cabin"
           placeholder="blur"
           quality={80}
         />
       </div>
 
-      <div className="col-span-2 relative aspect-square">
+      <div className="relative aspect-[4/3] sm:aspect-square sm:col-span-2 w-full order-2 sm:order-1">
         <Image
           src="/about-2.jpg"
           fill
@@ -61,28 +61,28 @@ export default async function Page() {
         />
       </div>
 
-      <div className="col-span-3">
+      <div className="sm:col-span-3 sm:order-2 order-1">
         <h1 className="text-4xl mb-10 text-accent-400 font-medium">
           A Place Grown from Generations of Heart
         </h1>
 
         <div className="space-y-8">
           <p>
-            This isn&apos;t a business born in a boardroom it&apos;s a place
+            This isn&apos;t a business born in a boardroom — it&apos;s a place
             shaped by hands that built with intention and hearts that never
             stopped caring. For as long as we can remember, this land has been
-            part of our everyday life the meals, the stories, the laughter
+            part of our everyday life — the meals, the stories, the laughter
             echoing through seasons.
           </p>
           <p>
             What you see today isn&apos;t the result of a strategy, but of slow,
             steady care passed from one generation to the next. No polished
-            gloss, no corporate blueprint just a legacy of welcome, warmth, and
-            the kind of quiet that makes you feel like you&apos;ve been here
+            gloss, no corporate blueprint — just a legacy of welcome, warmth,
+            and the kind of quiet that makes you feel like you&apos;ve been here
             before.
           </p>
           <p>
-            We don&apos;t just open doors. We share something personal and if
+            We don&apos;t just open doors. We share something personal — and if
             you decide to stay, you become part of the rhythm we&apos;ve always
             lived by.
           </p>
