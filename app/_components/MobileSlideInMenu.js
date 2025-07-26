@@ -6,12 +6,12 @@ import Link from "next/link";
 export default function MobileSlideInMenu({ isOpen, onClose, session }) {
   return (
     <div
-      className={`fixed inset-0 z-40 transition-all duration-300 md:hidden ${
+      className={`fixed inset-0 z-[9999] transition-all duration-300 md:hidden ${
         isOpen ? "visible opacity-100" : "invisible opacity-0"
       }`}
     >
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/50" onClick={onClose} />
+      <div className="absolute z-40 inset-0 bg-black/50" onClick={onClose} />
 
       {/* Slide-in Panel */}
       <div

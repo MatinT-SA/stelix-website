@@ -1,18 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import Link from "next/link";
 import { Menu } from "lucide-react";
-import MobileSlideInMenu from "./MobileSlideInMenu";
+import Link from "next/link";
 
-export default function Navigation({ session }) {
-  const [isOpen, setIsOpen] = useState(false);
-
+export default function Navigation({ session, isOpen, setIsOpen }) {
   return (
     <nav className="z-10 text-xl w-full bg-transparent px-4 py-3">
-      {/* Top Bar */}
       <div className="flex justify-end items-center max-w-7xl mx-auto">
-        {/* Hamburger Icon for Mobile */}
         <button
           className="md:hidden"
           onClick={() => setIsOpen(!isOpen)}
@@ -21,7 +15,6 @@ export default function Navigation({ session }) {
           <Menu size={28} />
         </button>
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-16">
           <li>
             <Link
@@ -64,13 +57,6 @@ export default function Navigation({ session }) {
           </li>
         </ul>
       </div>
-
-      {/* Mobile Menu Component */}
-      <MobileSlideInMenu
-        isOpen={isOpen}
-        onClose={() => setIsOpen(false)}
-        session={session}
-      />
     </nav>
   );
 }
