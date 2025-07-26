@@ -6,18 +6,18 @@ import { EyeSlashIcon, MapPinIcon, UsersIcon } from "@heroicons/react/24/solid";
 
 export default function Cabin({ cabin }) {
   return (
-    <div className="grid grid-cols-[3fr_4fr] gap-20 border border-primary-800 py-3 px-10 mb-24">
-      <div className="relative scale-[1.15] -translate-x-3">
+    <div className="grid grid-cols-1 sm:grid-cols-[3fr_4fr] gap-10 border border-primary-800 py-4 px-4 sm:px-10 mb-24">
+      <div className="relative h-64 sm:h-auto sm:scale-[1.15] sm:-translate-x-3">
         <Image
           fill
-          className="object-cover"
+          className="object-cover rounded-md"
           src={cabin.image}
           alt={`Cabin ${cabin.name}`}
         />
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-7xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+        <h3 className="text-accent-100 font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-5 bg-primary-950 p-6 pb-1 sm:translate-x-[-254px] w-full sm:w-[150%]">
           Cabin {cabin.name}
         </h3>
 
