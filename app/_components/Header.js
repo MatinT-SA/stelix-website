@@ -5,7 +5,7 @@ import Logo from "@/app/_components/Logo";
 import { useEffect, useState } from "react";
 import MobileSlideInMenu from "./MobileSlideInMenu";
 
-function Header({ session }) {
+function Header({ session, isHome }) {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
