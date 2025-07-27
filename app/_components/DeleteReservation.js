@@ -17,7 +17,7 @@ function DeleteReservation({ bookingId, onDelete }) {
     <>
       <button
         onClick={() => setIsConfirmOpen(true)}
-        className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 flex-grow px-3 hover:bg-accent-600 transition-colors hover:text-primary-900"
+        className="group flex items-center justify-center gap-2 uppercase text-xs font-bold text-primary-300 flex-grow px-3 hover:bg-rosewood-600 transition-colors hover:text-primary-900"
       >
         {!isPending ? (
           <>

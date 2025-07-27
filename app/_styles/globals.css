@@ -17,7 +17,7 @@
     background-image: conic-gradient(
       theme("colors.primary.200") 0 10%,
       theme("colors.primary.700") 10% 40%,
-      theme("colors.accent.500") 40% 60%,
+      theme("colors.rosewood.500") 40% 60%,
       transparent 60% 100%
     );
 
@@ -58,7 +58,7 @@
     inset: 0;
     border-radius: 50%;
     border: 3px solid transparent;
-    border-top-color: theme("colors.accent.500");
+    border-top-color: theme("colors.rosewood.500");
     animation: spin-rev 1.4s linear infinite;
   }
 
@@ -80,8 +80,8 @@
 
 .rdp {
   --rdp-cell-size: 32px !important;
-  --rdp-accent-color: theme("colors.accent.500") !important;
-  --rdp-background-color: theme("colors.accent.600") !important;
+  --rdp-rosewood-color: theme("colors.rosewood.500") !important;
+  --rdp-background-color: theme("colors.rosewood.600") !important;
   margin: 0 !important;
 }
 

@@ -20,7 +20,7 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
         <div className="flex justify-end p-4">
           <button
             onClick={onClose}
-            className="text-primary-100 hover:text-rosewood"
+            className="text-primary-100 hover:text-rosewood-400"
             aria-label="Close menu"
           >
             <X size={28} />
@@ -30,14 +30,14 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
         <div className="flex-1 flex flex-col items-center justify-start mt-10 gap-6 space-y-6 text-primary-100">
           <Link
             href="/cabins"
-            className="hover:text-rosewood transition-colors"
+            className="hover:text-rosewood-400 transition-colors"
             onClick={onClose}
           >
             Cabins
           </Link>
           <Link
             href="/about"
-            className="hover:text-rosewood transition-colors"
+            className="hover:text-rosewood-400 transition-colors"
             onClick={onClose}
           >
             About
@@ -45,7 +45,7 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
           {session?.user?.image ? (
             <Link
               href="/account"
-              className="hover:text-rosewood transition-colors flex items-center gap-3"
+              className="hover:text-rosewood-400 transition-colors flex items-center gap-3"
               onClick={onClose}
             >
               <img
@@ -59,7 +59,7 @@ export default function MobileSlideInMenu({ isOpen, onClose, session }) {
           ) : (
             <Link
               href="/account"
-              className="hover:text-rosewood transition-colors"
+              className="hover:text-rosewood-400 transition-colors"
               onClick={onClose}
             >
               Guest area

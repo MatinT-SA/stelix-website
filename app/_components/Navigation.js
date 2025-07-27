@@ -19,7 +19,7 @@ export default function Navigation({ session, isOpen, setIsOpen }) {
           <li>
             <Link
               href="/cabins"
-              className="hover:text-rosewood transition-colors"
+              className="hover:text-rosewood-400 transition-colors"
             >
               Cabins
             </Link>
@@ -27,7 +27,7 @@ export default function Navigation({ session, isOpen, setIsOpen }) {
           <li>
             <Link
               href="/about"
-              className="hover:text-rosewood transition-colors"
+              className="hover:text-rosewood-400 transition-colors"
             >
               About
             </Link>
@@ -36,7 +36,7 @@ export default function Navigation({ session, isOpen, setIsOpen }) {
             {session?.user?.image ? (
               <Link
                 href="/account"
-                className="hover:text-rosewood transition-colors flex items-center gap-4"
+                className="hover:text-rosewood-400 transition-colors flex items-center gap-4"
               >
                 <img
                   className="h-8 w-8 rounded-full"
@@ -49,7 +49,7 @@ export default function Navigation({ session, isOpen, setIsOpen }) {
             ) : (
               <Link
                 href="/account"
-                className="hover:text-rosewood transition-colors"
+                className="hover:text-rosewood-400 transition-colors"
               >
                 Guest area
               </Link>

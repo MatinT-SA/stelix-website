@@ -9,12 +9,12 @@ export const metadata = {
 };
 
 export default async function Page() {
-  const cabins = await getCabins();
+  const { count } = await getCabins();
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-5 gap-x-12 gap-y-24 text-lg items-center">
       <div className="sm:col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="text-4xl mb-10 text-rosewood-400 font-medium">
           Welcome to Stelix
         </h1>
 
@@ -26,10 +26,10 @@ export default async function Page() {
             and finding room to breathe again.
           </p>
           <p>
-            Our {cabins.length} cozy cabins offer just enough comfort to help
-            you settle in — and just enough space to let your mind wander. Step
-            outside, and you&apos;re surrounded by tall trees, open skies, and
-            trails that lead to moments you didn&apos;t plan.
+            With {count ?? 0} cozy cabins to choose from, we offer just enough
+            comfort to help you settle in — and just enough space to let your
+            mind wander. Step outside, and you&apos;re surrounded by tall trees,
+            open skies, and trails that lead to moments you didn&apos;t plan.
           </p>
           <p>
             Spend the evening around a fire. Watch the stars from the warmth of
@@ -90,7 +90,7 @@ export default async function Page() {
           <div>
             <a
               href="/cabins"
-              className="inline-block mt-4 rounded-xl bg-rosewood px-8 py-5 text-primary-50 text-lg font-semibold hover:bg-magenta transition-all"
+              className="inline-block mt-4 rounded-xl bg-rosewood-500 px-8 py-5 text-primary-50 text-lg font-semibold hover:bg-rosewood-600 transition-all"
             >
               Discover our cabins
             </a>

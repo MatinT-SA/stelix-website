@@ -6,7 +6,7 @@ function NotFound() {
       </h1>
       <a
         href="/"
-        className="inline-block rounded-md bg-rosewood text-primary-50 px-6 py-3 text-lg"
+        className="inline-block rounded-md bg-rosewood-500 text-primary-50 px-6 py-3 text-lg"
       >
         Go back home
       </a>

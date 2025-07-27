@@ -61,8 +61,10 @@ function ReservationCard({ booking, onDelete }) {
           ) &mdash; {format(new Date(endDate), "EEE, MMM dd yyyy")}
         </p>
 
-        <div className="flex flex-wrap gap-4 mt-auto items-baseline text-sm md:text-base mt-4">
-          <p className="text-lg font-semibold text-rosewood">${totalPrice}</p>
+        <div className="flex flex-wrap gap-4 mt-auto items-baseline text-sm md:text-base">
+          <p className="text-lg font-semibold text-rosewood-400">
+            ${totalPrice}
+          </p>
           <p className="text-primary-300 hidden md:block">&bull;</p>
           <p className="text-primary-300">
             {numGuests} guest{numGuests > 1 && "s"}
@@ -73,18 +75,18 @@ function ReservationCard({ booking, onDelete }) {
         </div>
       </div>
 
-      <div className="border-t md:border-t-0 md:border-l border-primary-800 w-full md:w-[100px]">
+      <div className="flex md:flex-col border-t md:border-t-0 md:border-l border-primary-800 w-full md:w-[100px]">
         {!isPast(startDate) && (
-          <div className="flex flex-row md:flex-col">
+          <>
             <Link
               href={`/account/reservations/edit/${id}`}
-              className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 border-r md:border-r-0 md:border-b border-primary-800 flex-grow px-3 py-2 hover:bg-accent-600 transition-colors hover:text-primary-900"
+              className="group flex justify-center items-center gap-2 uppercase text-xs font-bold text-primary-300 border-r md:border-r-0 md:border-b border-primary-800 flex-grow px-3 py-2 hover:bg-rosewood-600 transition-colors hover:text-primary-900"
             >
               <PencilSquareIcon className="h-5 w-5 text-primary-600 group-hover:text-primary-800 transition-colors" />
               <span className="mt-1">Edit</span>
             </Link>
             <DeleteReservation onDelete={onDelete} bookingId={id} />
-          </div>
+          </>
         )}
       </div>
     </div>

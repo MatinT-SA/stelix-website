@@ -55,7 +55,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
         }
       />
 
-      <div className="flex items-center justify-between lg:px-8 md:px-3 sm:px-1 xs:px-3 bg-rosewood text-primary-100 h-[72px]">
+      <div className="flex items-center justify-between lg:px-8 md:px-3 sm:px-1 xs:px-3 bg-rosewood-500 text-primary-100 h-[72px]">
         <div className="flex items-baseline gap-6">
           <p className="flex gap-2 items-baseline">
             {discount > 0 ? (
@@ -74,7 +74,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
           </p>
           {numNights ? (
             <>
-              <p className="bg-magenta px-3 py-2 lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
+              <p className="bg-rosewood-600 px-3 py-2 lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
                 <span>&times;</span> <span>{numNights}</span>
               </p>
               <p>
