@@ -28,7 +28,6 @@ function ReservationCard({ booking, onDelete }) {
 
   return (
     <div className="flex flex-col md:flex-row border border-primary-800 rounded-md overflow-hidden">
-      {/* Image */}
       <div className="relative h-52 md:h-auto md:w-52 flex-shrink-0">
         <Image
           src={image}
@@ -38,7 +37,6 @@ function ReservationCard({ booking, onDelete }) {
         />
       </div>
 
-      {/* Content */}
       <div className="flex-grow px-4 py-3 flex flex-col">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-1">
           <h3 className="text-lg md:text-xl font-semibold">
@@ -75,19 +73,18 @@ function ReservationCard({ booking, onDelete }) {
         </div>
       </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col border-t md:border-t-0 md:border-l border-primary-800 w-full md:w-[100px]">
+      <div className="border-t md:border-t-0 md:border-l border-primary-800 w-full md:w-[100px]">
         {!isPast(startDate) && (
-          <>
+          <div className="flex flex-row md:flex-col">
             <Link
               href={`/account/reservations/edit/${id}`}
-              className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 border-b border-primary-800 flex-grow px-3 py-2 hover:bg-accent-600 transition-colors hover:text-primary-900"
+              className="group flex items-center gap-2 uppercase text-xs font-bold text-primary-300 border-r md:border-r-0 md:border-b border-primary-800 flex-grow px-3 py-2 hover:bg-accent-600 transition-colors hover:text-primary-900"
             >
               <PencilSquareIcon className="h-5 w-5 text-primary-600 group-hover:text-primary-800 transition-colors" />
               <span className="mt-1">Edit</span>
             </Link>
             <DeleteReservation onDelete={onDelete} bookingId={id} />
-          </>
+          </div>
         )}
       </div>
     </div>
