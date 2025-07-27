@@ -74,7 +74,7 @@ function DateSelector({ cabin, settings, bookedDates }) {
           </p>
           {numNights ? (
             <>
-              <p className="bg-accent-600 px-3 py-2 lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
+              <p className="bg-magenta px-3 py-2 lg:text-2xl md:text-lg sm:text-md text-xs xs:text-lg">
                 <span>&times;</span> <span>{numNights}</span>
               </p>
               <p>
