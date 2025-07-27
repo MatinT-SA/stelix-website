@@ -26,10 +26,12 @@ export default async function Page() {
             and finding room to breathe again.
           </p>
           <p>
-            With {count ?? 0} cozy cabins to choose from, we offer just enough
-            comfort to help you settle in — and just enough space to let your
-            mind wander. Step outside, and you&apos;re surrounded by tall trees,
-            open skies, and trails that lead to moments you didn&apos;t plan.
+            With{" "}
+            <span className="text-rosewood-400">{count ?? 0} cozy cabins</span>{" "}
+            to choose from, we offer just enough comfort to help you settle in —
+            and just enough space to let your mind wander. Step outside, and
+            you&apos;re surrounded by tall trees, open skies, and trails that
+            lead to moments you didn&apos;t plan.
           </p>
           <p>
             Spend the evening around a fire. Watch the stars from the warmth of
@@ -62,7 +64,7 @@ export default async function Page() {
       </div>
 
       <div className="sm:col-span-3 sm:order-2 order-1">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+        <h1 className="text-4xl mb-10 text-rosewood-400 font-medium">
           A Place Grown from Generations of Heart
         </h1>
 

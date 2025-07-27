@@ -17,7 +17,7 @@ export default function Cabin({ cabin }) {
       </div>
 
       <div>
-        <h3 className="text-accent-100 font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-5 bg-primary-950 p-6 pb-1 sm:translate-x-[-254px] w-full sm:w-[150%]">
+        <h3 className="text-primary-100 font-black text-3xl sm:text-4xl md:text-5xl lg:text-7xl mb-5 bg-primary-950 p-6 pb-1 sm:translate-x-[-254px] w-full sm:w-[150%]">
           Cabin {cabin.name}
         </h3>
 
