@@ -1,6 +1,6 @@
 # Stelix Website
 
-![Uploading stelix-website.PNG…]()
+<img width="1920" height="922" alt="stelix-website" src="https://github.com/user-attachments/assets/482616d5-5472-4ed6-bbf5-91340dae08ca" />
 
 ## Description
 
