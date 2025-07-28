@@ -10,7 +10,6 @@ Stelix Website is the customer-facing web application for the Stelix platform. I
 - [Available Scripts](#available-scripts)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -88,9 +87,21 @@ stelix-website/
 ```
 
 ## Contributing
+Contributions are welcome! To contribute:
 
-Contributions are welcome! Please open an issue or pull request for any changes.
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature-branch
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Added a new feature"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature-branch
+   ```
+5. Open a Pull Request.
 
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+Enjoy using Stelix and happy coding! 🚀
