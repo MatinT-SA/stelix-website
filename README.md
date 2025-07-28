@@ -1,5 +1,9 @@
 # Stelix Website
 
+![Uploading stelix-website.PNG…]()
+
+## Description
+
 Stelix Website is the customer-facing web application for the Stelix platform. It provides users with an intuitive interface to access, interact with, and manage the core features and services offered by Stelix.
 
 ## Table of Contents
